@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Inventory</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="container">
+    <div class="text-center">
+ <!-- Store Header and Application Header -->
+        <h1>
+            Jay's Hardware <br>
+            <small class="text-muted">Store Inventory List</small>
+        </h1>
+        <br>
+<!-- Instructions for user -->
+        <p><em>Follow the form below to complete inventory list for each quarter. 
+            Review all inventory items once complete. 
+        </em></p>
+    </div> 
+<!--Form section  -->
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                       <label for="item-id">Item ID</label>  
+                       <input type="text" class="form-control" id="item-id" placeholder="Located below barcode">  
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="item-name">Item Name</label>  
+                        <input type="text" class="form-control" id="item-name" placeholder="Located top of tag"> 
+                    </div>
+                </div>
+            </div> 
+            <div class="row ">
+                <div class="col-sm-2">
+                    <div class="form-group">
+                       <label for="item-count">Item Quantity</label>  
+                       <input type="number" class="form-control" id="item-count" placeholder="##">  
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="item-price">Item Price</label>  
+                        <input type="text"  class="form-control" id="item-price" placeholder="$##.## "> 
+                    </div>
+                </div>
+                <div class="col-sm-1">
+                    <div class="form-group">
+                        <label for="item-reorder">Reorder?</label>  
+                        <input type="text" class="form-control" id="item-reorder" placeholder="Y or N"> 
+                    </div>
+                </div>
+            </div> 
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                       <label for="full-name">Full Name</label>  
+                       <input type="text" class="form-control" id="full-name" placeholder="Last, First ">  
+                    </div>
+                </div>
+            </div> 
+            <br>
+            <div>
+                <button type="submit" class="btn btn-primary" id="submit">submit</button>
+            </div>  
+        </div>
+    </div>
+    <br>
+    <br>
+<!-- Dark theme table - header only  -->
+    <div>
+        <table id="list" class="table table-dark table-striped">
+                <tr>
+                <th scope="col">Item ID</th>
+                <th scope="col">Item Name</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Item Price</th>
+                <th scope="col">Reorder?</th>
+                <th scope="col">Name</th>
+                <th scope="col">Date</th>
+                <th scope="col">Remove</th>
+                </tr>
+
+        </table>
+    </div>
+    <script src="inventory.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
